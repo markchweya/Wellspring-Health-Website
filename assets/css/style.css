@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2025 unifyhive
+ * copyright 2022 codewithsadee
  */
 
 
@@ -247,7 +247,22 @@ body.nav-active {
 
 .section {
     padding-block: var(--section-padding);
+    position: relative;
+    /* Needed for pseudo-elements positioning */
+    z-index: 1;
+    /* Ensure sections stack correctly for visual layers */
 }
+
+/* Add margin-bottom to sections to create space for the curved separator */
+.hero,
+.service,
+.about,
+.listing,
+.blog {
+    margin-bottom: 50px;
+    /* Space for the wave to sit in */
+}
+
 
 .has-before,
 .has-after {
@@ -363,13 +378,15 @@ body.nav-active {
 }
 
 @keyframes rotate-y {
-    from {
+    0% {
         transform: perspective(1000px) rotateY(0deg);
     }
 
-    to {
-        transform: perspective(1000px) rotateY(10deg);
+    100% {
+        transform: perspective(1000px) rotateY(5deg);
     }
+
+    /* Reduced rotation for subtlety */
 }
 
 
@@ -382,8 +399,56 @@ body.nav-active {
     animation: rotate-y 0.5s ease-out forwards;
 }
 
-/* Example of applying fade-in-up to new elements if added, or existing ones */
-/* .some-new-element { animation: fade-in-up 0.8s ease-out forwards; } */
+/*-----------------------------------*\
+  #CURVED SECTION SEPARATORS
+\*-----------------------------------*/
+.section::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    /* Position it below the section to create the curve effect */
+    left: 0;
+    width: 100%;
+    height: 100px;
+    /* Height of the curved element */
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    /* Creates a full top curve */
+    z-index: -1;
+    /* Place behind the section content */
+    pointer-events: none;
+    /* Allows interaction with content above */
+}
+
+/* Specific wave colors for each section to blend with the next section's background */
+/* Hero section (dark blue) -> Service section (white) */
+.hero::after {
+    background-color: var(--white);
+}
+
+/* Service section (white) -> About section (white) - use a distinct color for the wave */
+.service::after {
+    background-color: var(--light-peach);
+}
+
+/* About section (white) -> Listing section (light-peach) */
+.about::after {
+    background-color: var(--light-peach);
+}
+
+/* Listing section (light-peach) -> Blog section (gradient, but visually starts light-peach) */
+.listing::after {
+    background-color: var(--white);
+}
+
+/* Blog section (gradient) -> Footer (midnight-green) */
+.blog::after {
+    background-color: var(--midnight-green);
+}
+
+/* Ensure the footer does not have a wave at its bottom */
+.footer::after {
+    display: none;
+}
 
 
 /*-----------------------------------*\
@@ -451,20 +516,9 @@ body.nav-active {
 .header.active {
     position: fixed;
     background-color: var(--rich-black-fogra-29);
-    /* The animation `headerActive` is for initial fixed appearance. */
-    animation: headerActive 0.5s ease forwards;
+    /* Removed `animation: headerActive` as JS handles dynamic show/hide */
     box-shadow: var(--shadow-3);
     /* Added shadow to active header */
-}
-
-@keyframes headerActive {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }
 
 /* New class for hiding the header on scroll down */
