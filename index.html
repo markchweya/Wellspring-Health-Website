@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+      - Primary meta tags for SEO and description
+    -->
+  <title>Wellspring Health - Your Path to Wellness</title>
+  <meta name="title" content="Wellspring Health - Empowering Your Health Journey">
+  <meta name="description"
+    content="Your dedicated health partner providing comprehensive medical services and specialized support.">
+
+  <!--
+      - Favicon for the browser tab
+    -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--
+      - Google Fonts link for Oswald and Rubik, preconnected for performance
+    -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!--
+      - Custom CSS link for styling (assuming style.css is in assets/css/)
+    -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+      - Preload hero images for faster loading
+    -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+
+</head>
+
+<body id="top">
+
+  <!--
+      - #PRELOADER
+      - A simple preloader animation to enhance user experience during page load.
+    -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!--
+      - #HEADER
+      - Main navigation bar with logo, navigation links, social media, and a call to action button.
+    -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="136" height="46" alt="Wellspring Health home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="136" height="46" alt="Wellspring Health home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Our Experts</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Care Options</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Wellness Insights</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Connect With Us</a>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="#" class="btn has-before title-md">Schedule Visit</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!--
+              - #HERO
+              - The main hero section with a welcoming message, headline, search bar, and hero image.
+            -->
+      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle has-before" data-reveal="left">Discover Wellspring Health</p>
+
+            <h1 class="headline-lg hero-title" data-reveal="left">
+              Your Health, <br>
+              Personalized for You.
+            </h1>
+
+            <div class="hero-card" data-reveal="left">
+
+              <p class="title-lg card-text">
+                Locate trusted doctors, centers, and health resources nearby
+              </p>
+
+              <div class="wrapper">
+
+                <div class="input-wrapper title-lg">
+                  <input type="text" name="location" placeholder="Enter your city or zip code" class="input-field">
+
+                  <ion-icon name="location"></ion-icon>
+                </div>
+
+                <button class="btn has-before">
+                  <ion-icon name="search"></ion-icon>
+
+                  <span class="span title-md">Find</span>
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <figure class="hero-banner" data-reveal="right">
+            <img src="./assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner"
+              class="w-100">
+          </figure>
+
+        </div>
+
+        <!--
+
+
+      <!--
+              - #SERVICE
+              - Section displaying various health services offered.
+            -->
+        <section class="service" aria-label="service">
+          <div class="container">
+
+            <ul class="service-list">
+
+              <li>
+                <div class="service-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <h3 class="headline-sm card-title">
+                    <a href="#">Mindful Wellbeing</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Nurturing your inner peace and emotional resilience
+                  </p>
+
+                  <button class="btn-circle" aria-label="learn more about mental wellbeing">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </button>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <h3 class="headline-sm card-title">
+                    <a href="#">Female Wellness</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Dedicated health services for women at every stage
+                  </p>
+
+                  <button class="btn-circle" aria-label="learn more about women's health">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </button>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-3.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <h3 class="headline-sm card-title">
+                    <a href="#">Breathing Easy</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Specialized support for respiratory health and function
+                  </p>
+
+                  <button class="btn-circle" aria-label="learn more about respiratory care">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </button>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <h3 class="headline-sm card-title">
+                    <a href="#">Mobility & Strength</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Caring for your bones, joints, and muscles
+                  </p>
+
+                  <button class="btn-circle" aria-label="learn more about bone and joint health">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </button>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+        <!--
+              - #ABOUT
+              - Section detailing the clinic's commitment, vision, mission, and approach.
+            -->
+        <section class="section about" aria-labelledby="about-label">
+          <div class="container">
+
+            <div class="about-content">
+
+              <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">Our Foundation</p>
+
+              <h2 class="headline-md" data-reveal="left">Your Health, Our Expertise</h2>
+
+              <p class="section-text" data-reveal="left">
+                At Wellspring Health, our team of skilled healthcare professionals is dedicated to providing
+                compassionate and advanced medical care, tailored to your individual health journey.
+              </p>
+
+              <ul class="tab-list" data-reveal="left">
+
+                <li>
+                  <button class="tab-btn active">Our Vision</button>
+                </li>
+
+                <li>
+                  <button class="tab-btn">Our Purpose</button>
+                </li>
+
+                <li>
+                  <button class="tab-btn">Our Approach</button>
+                </li>
+
+              </ul>
+
+              <p class="tab-text" data-reveal="left">
+                We envision a community where everyone has access to personalized, high-quality healthcare
+                that empowers them to live healthier and more fulfilling lives.
+              </p>
+
+              <div class="wrapper">
+
+                <ul class="about-list">
+
+                  <li class="about-item" data-reveal="left">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                    <span class="span">Certified and caring professionals</span>
+                  </li>
+
+                  <li class="about-item" data-reveal="left">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                    <span class="span">Modern and comfortable facilities</span>
+                  </li>
+
+                  <li class="about-item" data-reveal="left">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                    <span class="span">Focus on your individual needs</span>
+                  </li>
+
+                  <li class="about-item" data-reveal="left">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                    <span class="span">Committed to continuous improvement</span>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+            <figure class="about-banner" data-reveal="right">
+              <img src="./assets/images/about-banner.png" width="554" height="678" loading="lazy" alt="about banner"
+                class="w-100">
+            </figure>
+
+          </div>
+        </section>
+
+        <!--
+              - #LISTING
+              - Section showcasing various medical specialties and comprehensive care services.
+            -->
+        <section class="section listing" aria-labelledby="listing-label">
+          <div class="container">
+
+            <ul class="grid-list">
+
+              <li>
+                <p class="section-subtitle title-lg" id="listing-label" data-reveal="left">Specialized Medical Areas</p>
+
+                <h2 class="headline-md" data-reveal="left">Comprehensive Health Solutions</h2>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title">Emotional Support</h3>
+
+                    <p class="card-text">Guidance and therapy services</p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title">Women's Wellbeing</h3>
+
+                    <p class="card-text">Gynecological and obstetric care</p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title">Lung Health</h3>
+
+                    <p class="card-text">Respiratory system specialists</p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-5.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title">Musculoskeletal Care</h3>
+
+                    <p class="card-text">Joint and bone specialists</p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-6.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title">Children's Health</h3>
+
+                    <p class="card-text">Pediatric medical services</p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/icon-7.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title">Senior Care</h3>
+
+                    <p class="card-text">Healthcare for older adults</p>
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+        <!--
+              - #BLOG
+              - Section featuring the latest health articles and insights.
+            
+        <section class="section blog" aria-labelledby="blog-label">
+          <div class="container">
+
+            <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">
+              Your Wellbeing Resource
+            </p>
+
+            <h2 class="section-title headline-md text-center" data-reveal="bottom">Latest Health Updates</h2>
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                  <div class="meta-wrapper">
+
+                    <div class="card-meta">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <span class="span">By Dr. Eleanor Reed</span>
+                    </div>
+
+                    <div class="card-meta">
+                      <ion-icon name="folder-outline"></ion-icon>
+
+                      <span class="span">Preventative Strategies</span>
+                    </div>
+
+                  </div>
+
+                  <h3 class="headline-sm card-title">The Importance of Regular Health Assessments</h3>
+
+                  <time class="title-sm date" datetime="2023-06-15">June 15, 2023</time>
+
+                  <p class="card-text">
+                    Early detection through routine check-ups can significantly improve health outcomes.
+                    Discover the recommended screenings for your age and lifestyle.
+                  </p>
+
+                  <a href="#" class="btn-text title-lg">Learn More</a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                  <div class="meta-wrapper">
+
+                    <div class="card-meta">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <span class="span">By Dr. Samuel Green</span>
+                    </div>
+
+                    <div class="card-meta">
+                      <ion-icon name="folder-outline"></ion-icon>
+
+                      <span class="span">Mental Wellness</span>
+                    </div>
+
+                  </div>
+
+                  <h3 class="headline-sm card-title">Finding Balance in a Connected World</h3>
+
+                  <time class="title-sm date" datetime="2023-06-10">June 10, 2023</time>
+
+                  <p class="card-text">
+                    Explore practical techniques for managing digital overload and fostering mental
+                    clarity and peace in today's fast-paced environment.
+                  </p>
+
+                  <a href="#" class="btn-text title-lg">Read On</a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                  <div class="meta-wrapper">
+
+                    <div class="card-meta">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <span class="span">By Nutritionist Olivia Stone</span>
+                    </div>
+
+                    <div class="card-meta">
+                      <ion-icon name="folder-outline"></ion-icon>
+
+                      <span class="span">Healthy Eating</span>
+                    </div>
+
+                  </div>
+
+                  <h3 class="headline-sm card-title">Nourishing Your Heart Through Diet</h3>
+
+                  <time class="title-sm date" datetime="2023-06-05">June 5, 2023</time>
+
+                  <p class="card-text">
+                    Understand the key dietary choices that promote a healthy cardiovascular system and
+                    simple ways to incorporate these into your daily meals.
+                  </p>
+
+                  <a href="#" class="btn-text title-lg">Discover More</a>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+    </article>
+  </main> -->
+
+        <!--
+      - #FOOTER
+      - Footer section with contact information, quick links, and a newsletter subscription.
+    -->
+        <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+          <div class="container">
+
+            <div class="section footer-top">
+
+              <div class="footer-brand" data-reveal="bottom">
+
+                <a href="#" class="logo">
+                  <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy"
+                    alt="Wellspring Health home">
+                </a>
+
+                <ul class="contact-list has-after">
+
+                  <li class="contact-item">
+
+                    <div class="item-icon">
+                      <ion-icon name="mail-open-outline"></ion-icon>
+                    </div>
+
+                    <div>
+                      <p>
+                        General Inquiries: <a href="mailto:info@wellspringhealth.com"
+                          class="contact-link">info@wellspringhealth.com</a>
+                      </p>
+
+                      <p>
+                        Appointments: <a href="mailto:appointments@wellspringhealth.com"
+                          class="contact-link">appointments@wellspringhealth.com</a>
+                      </p>
+                    </div>
+
+                  </li>
+
+                  <li class="contact-item">
+
+                    <div class="item-icon">
+                      <ion-icon name="call-outline"></ion-icon>
+                    </div>
+
+                    <div>
+                      <p>
+                        Main Office: <a href="tel:+18001234567" class="contact-link">(800) 123-4567</a>
+                      </p>
+
+                      <p>
+                        Urgent Care: <a href="tel:+18007654321" class="contact-link">(800) 765-4321</a>
+                      </p>
+                    </div>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <div class="footer-list" data-reveal="bottom">
+
+                <p class="headline-sm footer-list-title">About Us</p>
+
+                <p class="text">
+                  We are dedicated to fostering your health and wellbeing through personalized care and
+                  innovative solutions.
+                </p>
+
+                <address class="address">
+                  <ion-icon name="map-outline"></ion-icon>
+
+                  <span class="text">
+                    456 Vitality Lane <br>
+                    Seattle, WA 98101
+                  </span>
+                </address>
+
+              </div>
+
+              <ul class="footer-list" data-reveal="bottom">
+
+                <li>
+                  <p class="headline-sm footer-list-title">Our Care Options</p>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">General Practice</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Specialized Consultations</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Advanced Diagnostics</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Preventive Wellness</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Wellbeing Programs</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Virtual Health</a>
+                </li>
+
+              </ul>
+
+              <ul class="footer-list" data-reveal="bottom">
+
+                <li>
+                  <p class="headline-sm footer-list-title">Quick Access</p>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Patient Portal</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Insurance Information</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Billing & Payments</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Join Our Team</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Health Resources</a>
+                </li>
+
+                <li>
+                  <a href="#" class="text footer-link">Common Questions</a>
+                </li>
+
+              </ul>
+
+              <div class="footer-list" data-reveal="bottom">
+
+                <p class="headline-sm footer-list-title">Stay Informed</p>
+
+                <form action="" class="footer-form">
+                  <input type="email" name="email" placeholder="Your email address" class="input-field title-lg">
+
+                  <button type="submit" class="btn has-before title-md">Subscribe</button>
+                </form>
+
+                <p class="text">
+                  Receive our monthly newsletter for health tips and expert advice
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+              <p class="text copyright">
+                &copy; 2025 Wellspring Health | All Rights Reserved
+              </p>
+
+              <ul class="social-list">
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </footer>
+
+        <!--
+      - #BACK TO TOP
+      - Button to scroll back to the top of the page.
+    -->
+        <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+          <ion-icon name="chevron-up"></ion-icon>
+        </a>
+
+        <!--
+      - Custom JavaScript link for interactive elements (assuming script.js is in assets/js/)
+    -->
+        <script src="./assets/js/script.js"></script>
+
+        <!--
+      - Ionicon library for icons
+    -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
