@@ -83,6 +83,8 @@
     --shadow-2: 0 4px 16px hsla(0, 0%, 0%, 0.06);
     --shadow-3: 0 8px 24px hsla(0, 0%, 0%, 0.1);
     /* New shadow for depth */
+    --shadow-4: 0 10px 30px hsla(0, 0%, 0%, 0.15);
+    /* More pronounced shadow for hover */
 
     /**
    * border radius
@@ -177,6 +179,13 @@ body {
     color: var(--independece);
     line-height: 1.8;
     overflow: hidden;
+    /* Subtle radial gradient for background texture */
+    background-image: radial-gradient(circle at top left, hsla(0, 0%, 100%, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at bottom right, hsla(0, 0%, 100%, 0.05) 0%, transparent 50%);
+    background-size: 100% 100%;
+    /* Ensure it covers the whole body */
+    background-attachment: fixed;
+    /* Keep background fixed during scroll for subtle parallax */
 }
 
 body.loaded {
@@ -296,7 +305,8 @@ body.nav-active {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: var(--eerie-black);
+    /* Changed to a subtle gradient overlay */
+    background-image: linear-gradient(to right, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.3));
     border-radius: var(--radius-6);
     transition: var(--transition-2);
     z-index: -1;
@@ -369,9 +379,10 @@ body.nav-active {
     }
 
     50% {
-        transform: scale(1.05);
+        transform: scale(1.02);
     }
 
+    /* Reduced pulse intensity */
     100% {
         transform: scale(1);
     }
@@ -395,9 +406,17 @@ body.nav-active {
     animation: pulse 0.8s infinite;
 }
 
-.service-card:is(:hover, :focus-within) {
-    animation: rotate-y 0.5s ease-out forwards;
+/* Service and Listing Card Hover Effects */
+.service-card:is(:hover, :focus-within),
+.listing-card:is(:hover, :focus-within) {
+    transform: translateY(-8px);
+    /* More pronounced lift */
+    box-shadow: var(--shadow-4);
+    /* Stronger shadow on hover */
+    transition: var(--transition-1);
+    /* Ensure smooth transition */
 }
+
 
 /*-----------------------------------*\
   #CURVED SECTION SEPARATORS
@@ -510,7 +529,8 @@ body.nav-active {
     padding-block: 16px;
     z-index: 4;
     /* Added transition for smooth hide/show effect */
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, background-color 0.3s ease-out;
+    /* Added background-color transition */
 }
 
 .header.active {
@@ -627,6 +647,9 @@ body.nav-active {
     --section-padding: 200px;
     background-repeat: no-repeat;
     background-size: cover;
+    /* Added subtle gradient overlay */
+    background-image: linear-gradient(to bottom, hsla(186, 100%, 19%, 0.8) 0%, hsla(186, 100%, 19%, 0.6) 100%),
+        url('../images/hero-bg.png');
 }
 
 .hero-subtitle {
