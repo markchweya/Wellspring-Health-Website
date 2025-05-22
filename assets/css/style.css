@@ -444,11 +444,14 @@ body.nav-active {
     width: 100%;
     padding-block: 16px;
     z-index: 4;
+    /* Added transition for smooth hide/show effect */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .header.active {
     position: fixed;
     background-color: var(--rich-black-fogra-29);
+    /* The animation `headerActive` is for initial fixed appearance. */
     animation: headerActive 0.5s ease forwards;
     box-shadow: var(--shadow-3);
     /* Added shadow to active header */
@@ -462,6 +465,14 @@ body.nav-active {
     100% {
         transform: translateY(0);
     }
+}
+
+/* New class for hiding the header on scroll down */
+.header.header-hide {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    /* Prevents interaction with hidden header */
 }
 
 .header .container {
